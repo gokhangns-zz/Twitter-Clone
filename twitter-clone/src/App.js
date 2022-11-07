@@ -1,10 +1,17 @@
+import React from 'react';
+import Container from './Layout/Container';
+import Content from './Layout/Content';
+import SideBar from './Layout/SideBar';
+import Widgets from './Layout/Widgets';
 
-import './App.css';
 
-export default function App() {
+const App = () => {
   return (
-    <h1 className="text-3xl font-bold underline">
-      Twitter Clone
-    </h1>
-  )
-}
+    <Container>
+      <SideBar />
+      <Content />
+      <Widgets />
+    </Container>
+  );
+};
+export default App;
