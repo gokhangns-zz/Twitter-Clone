@@ -1,18 +1,20 @@
-import React, { useState } from 'react';
-import SideLink from '../Components/SideLink';
+import React, { useState } from "react";
+import SideLink from "../Components/SideLink";
+import UserBox  from "../Components/UserBox";
+import TwitterLogo from "../img/TwitterLogo.svg";
 
 import {
-  HomeIcon,
-  ExploreIcon,
-  NotificationsIcon,
-  MessagesIcon,
   BookmarksIcon,
+  ExploreIcon,
+  HomeIcon,
   ListsIcon,
-  ProfileIcon,
+  MessagesIcon,
   MoreIcon,
-} from "../icons/Icon.js";
+  NotificationsIcon,
+  ProfileIcon,
+} from "../icons/Icon";
 
-import TwitterLogo from '../img/TwitterLogo.svg';
+
 
 const sideLinks = [
   {
@@ -24,7 +26,7 @@ const sideLinks = [
     icon: ExploreIcon,
   },
   {
-    name: "Notification",
+    name: "Notifications",
     icon: NotificationsIcon,
   },
   {
@@ -36,7 +38,7 @@ const sideLinks = [
     icon: BookmarksIcon,
   },
   {
-    name: "List",
+    name: "Lists",
     icon: ListsIcon,
   },
   {
@@ -49,22 +51,18 @@ const sideLinks = [
   },
 ];
 
-const SideBar = () => {
+const Sidebar = () => {
   const [active, setActive] = useState("Home");
-  const onMenuItemClick = (name) => {
-    setActive(name);
-  }
-  return (
-    <div className='flex flex-col justify-between w-72  px-2'>
-      <div>
-        <div className='mt-1 mb-4 ml-1 hover:bg-gray-lightest 
-        flex items-center 
-        justify-center
-         w-12 h-12 
-        rounded-full 
-        transform transition-colors duration-200'>
-          <img src={TwitterLogo} alt='Twitter Logo' className="w-9 h-9" />
 
+  const handleMenuItemClick = (name) => {
+    setActive(name);
+  };
+
+  return (
+    <div className="h-screen sticky top-0 flex flex-col justify-between w-72 px-2">
+      <div>
+        <div className="mt-1 mb-4 ml-1 flex items-center justify-center w-12 h-12 rounded-full hover:bg-gray-lightest transform transition-colors duration-200">
+          <img src={TwitterLogo} alt="Twitter Logo" className="w-9 h-9" />
         </div>
         <nav className="mb-4">
           <ul>
@@ -75,25 +73,17 @@ const SideBar = () => {
                 Icon={icon}
                 active={active}
                 onMenuItemClick={handleMenuItemClick}
-
               />
             ))}
           </ul>
         </nav>
-        <button className='bg-primary-base
-         text-white shadow-lg
-          hover:bg-primary-dark 
-          transform transition-colors duration-200 
-          rounded-full py-3 px-8 w-11/12'>
+        <button className="bg-primary-base hover:bg-primary-dark text-white shadow-lg rounded-full py-3 px-8 w-11/12 transform transition-colors duration-200">
           Tweet
         </button>
-
       </div>
-      <div> Alt Taraf</div>
-
-
+      <UserBox />
     </div>
   );
 };
 
-export default SideBar;
+export default Sidebar;

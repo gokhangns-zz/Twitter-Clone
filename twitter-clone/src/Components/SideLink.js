@@ -1,32 +1,27 @@
-import React from 'react'
+import React from "react";
 
-const SideLink = ({ name, Icon, active, handleMenuItemClick }) => {
+const SideLink = ({ name, Icon, active, onMenuItemClick }) => {
+  const isActive = active === name;
   return (
-    <li className='group'>
+    <li className="group" onClick={() => onMenuItemClick(name)}>
       <a
         href={name.toLowerCase()}
-        className='mb-2 cursor-pointer block text-xl'>
-        <div
-          className='inline-block'>
+        className="cursor-pointer block text-xl mb-2 pointer-events-none"
+      >
+        <div className="inline-block">
           <div
-            className='flex items-center
-           group-hover:bg-primary-light
-            group-hover:text-primary-dark 
-            rounded-full
-             pl-3 
-             pr-8 
-             py-3 '>
+            className={`flex items-center group-hover:bg-primary-light group-hover:text-primary-base rounded-full pl-3 pr-8 py-3
+          
+           ${isActive ? "text-primary-base" : ""}
+          `}
+          >
             <Icon />
-            <span
-              className='ml-4 font-semibold'>
-              {name}
-            </span>
-
+            <span className="ml-4 font-bold">{name}</span>
           </div>
         </div>
       </a>
     </li>
-  )
-}
+  );
+};
 
-export default SideLink
+export default SideLink;
