@@ -1,14 +1,14 @@
-import React from 'react';
-import Container from './Layout/Container';
-import Content from './Layout/Content';
-import Sidebar from './Layout/SideBar';
-import Widgets from './Layout/Widgets';
+import React from "react";
+import Container from "../src/Layout/Container";
+import SideBar from "../src/Layout/SideBar";
+import Content from "../src/Layout/Content";
+import Widgets from "../src/Layout/Widgets";
 
 
 const App = () => {
   return (
     <Container>
-      <Sidebar />
+      <SideBar />
       <Content />
       <Widgets />
     </Container>

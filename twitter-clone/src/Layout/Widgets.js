@@ -1,6 +1,6 @@
 import React from "react";
 import { SearchIcon } from "../icons/Icon";
-import {Timeline} from "react-twitter-widgets";
+import { Timeline } from "react-twitter-widgets";
 
 const Widgets = () => {
   return (
