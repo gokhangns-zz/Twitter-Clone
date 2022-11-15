@@ -1,6 +1,6 @@
 import firebase from "firebase";
 import React, { useState } from "react";
-import db from "../firebase";
+import db from "firebase";
 import {
     EmojiIcon,
     GIFIcon,
@@ -15,14 +15,14 @@ const TweetBox = () => {
     const sendTweet = () => {
         if (content !== "") {
             db.collection("feed").add({
-                displayName: "Didem Küçükkaraaslan",
-                username: "@DidemKkkaraasl1",
+                displayName: "Mr. Code",
+                username: "@mrcode",
                 content,
                 timestamp: firebase.firestore.FieldValue.serverTimestamp(),
                 image:
-                    "https://64.media.tumblr.com/c9f8bdfb7ae61c3eb8a00e6ac5ca11a4/07dd3f9d137818fd-4f/s540x810/d83025e503bc5955cb004606132a99794b0cfab5.gif",
+                    "https://media.tenor.com/LEe1hkOO6mAAAAAM/penguin-wave.gif",
                 avatar:
-                    "https://pbs.twimg.com/profile_images/1373343596150132738/j8K08iHu_400x400.jpg",
+                    "https://global-uploads.webflow.com/6097e0eca1e875de53031ff6/6128a6efab1b0984562c0979_maxwell-nelson-taiuG8CPKAQ-unsplash-p-2000.jpeg",
             });
 
             setContent("");
