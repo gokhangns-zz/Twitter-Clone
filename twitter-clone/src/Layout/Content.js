@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
-import Divider from "../components/Divider";
+import db from "../firebase";
 import FeedList from "../Components/FeedList";
-import TweetBox from "../Components/TweetBox";
-import db from "./firebase";
-
+import TweetBox from "../Components/Tweetbox";
 import { PopulerIcon } from "../icons/Icon";
 
 
@@ -27,13 +25,14 @@ const Content = () => {
       </header>
       <div className="flex space-x-4 px-4 py-3">
         <img
-          src="https://pbs.twimg.com/profile_images/1373343596150132738/j8K08iHu_400x400.jpg"
+          src="https://global-uploads.webflow.com/6097e0eca1e875de53031ff6/6128a6efab1b0984562c0979_maxwell-nelson-taiuG8CPKAQ-unsplash-p-2000.jpeg"
           alt="Profile"
           className="w-11 h-11 rounded-full"
         />
         <TweetBox />
       </div>
-      <Divider />
+      <divider />
+
 
       {/* Feed */}
       <FeedList tweets={tweets} />

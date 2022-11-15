@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import SideLink from "../Components/SideLink";
-import UserBox  from "../Components/UserBox";
-import TwitterLogo from "../img/TwitterLogo.svg";
+import UserBox from "../Components/UserBox";
+import twitterlogo from "../images/twitterlogo.svg";
 
 import {
   BookmarksIcon,
@@ -62,7 +62,7 @@ const Sidebar = () => {
     <div className="h-screen sticky top-0 flex flex-col justify-between w-72 px-2">
       <div>
         <div className="mt-1 mb-4 ml-1 flex items-center justify-center w-12 h-12 rounded-full hover:bg-gray-lightest transform transition-colors duration-200">
-          <img src={TwitterLogo} alt="Twitter Logo" className="w-9 h-9" />
+          <img src={twitterlogo} alt="Twitter Logo" className="w-9 h-9" />
         </div>
         <nav className="mb-4">
           <ul>
