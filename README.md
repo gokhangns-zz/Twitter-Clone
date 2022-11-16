@@ -21,7 +21,7 @@
 
 
 
-## `Screen`
+## Screen
 
 ![Home](twitter-clone/src/images/HomePage.png)
 
