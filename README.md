@@ -1,5 +1,4 @@
-# Kodluyoruz React Bootcamp Final Project
-# Twitter Clone
+# Kodluyoruz React Bootcamp Final Project { Twitter Clone }
 
 ## Languages,Tools & References
 
